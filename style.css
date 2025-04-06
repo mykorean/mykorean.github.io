@@ -1,138 +1,137 @@
-/* style.css - 확장 버전: Dopetrope 스타일 + 배너 + 소개 + 연락처 */
+/* style.css - Dopetrope 기반 구조 스타일링 + 상세 주석 포함 */
 
-/* ============================= */
-/* 🌐 전역 설정 / Global Settings */
-/* ============================= */
+/* 🔹 기본 설정 / Base Reset */
 body {
-  font-family: 'Noto Sans KR', sans-serif; /* 한국어에 최적화된 고급 고딕체 / Elegant Korean sans-serif font */
-  margin: 0; /* 페이지 여백 제거 / Remove page margin */
-  padding: 0; /* 페이지 패딩 제거 / Remove page padding */
-  background: #2c2c2c; /* 기본 다크 배경 / Dark theme background */
-  color: #f0f0f0; /* 기본 텍스트 색상 / Default text color */
-  line-height: 1.6; /* 줄 간격 / Line height */
-}
-
-/* ============================= */
-/* 🎨 헤더 스타일 / Header Styling */
-/* ============================= */
-header {
-  background: linear-gradient(to right, #c72e4f, #2a5caa, #ffffff, #222222, #c1995b, #7cae7a); /* 전통 한국 색상 기반 그라데이션 / Traditional Korean gradient */
-  color: white; /* 텍스트 색상 / Text color */
-  padding: 2rem 1.5rem; /* 상하 2rem 좌우 1.5rem 여백 / Padding */
-  text-align: center; /* 텍스트 가운데 정렬 / Center align */
-}
-
-header h1 {
-  margin: 0; /* 기본 마진 제거 / Remove default margin */
-  font-size: 2.5rem; /* 큰 제목 크기 / Large heading */
-}
-
-/* ============================= */
-/* 🧭 내비게이션 / Navigation Bar */
-/* ============================= */
-nav {
-  background: #1a1a1a; /* 다크 그레이 배경 / Dark gray nav background */
-  padding: 1rem; /* 내비게이션 바 여백 / Padding */
-}
-
-nav ul {
-  list-style: none; /* 점 없는 리스트 / No bullets */
-  display: flex; /* 가로 정렬 / Horizontal flex */
-  justify-content: center; /* 가운데 정렬 / Centered items */
-  flex-wrap: wrap; /* 반응형 감김 처리 / Wrap on small screens */
-  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif; /* 한국어 웹페이지에 최적화된 산세리프 글꼴 / Korean-optimized sans-serif font */
+  background: #2c2c2c; /* 전체 배경을 어두운 회색으로 설정 / Set dark background */
+  color: #f0f0f0; /* 텍스트 색상을 밝은 회색으로 설정 / Light gray text for contrast */
   margin: 0;
+  padding: 0;
+  line-height: 1.6; /* 줄 간격 증가로 가독성 향상 / Better readability */
 }
 
-nav li {
-  margin: 0 1rem; /* 리스트 항목 사이 간격 / Spacing between menu items */
+/* 🔹 헤더 / Header */
+#header {
+  background: linear-gradient(to right, #c72e4f, #2a5caa, #ffffff, #222222, #c1995b, #7cae7a); /* 전통 오방색 그라데이션 적용 / Traditional Korean gradient */
+  text-align: center;
+  padding: 4rem 1rem; /* 상단 여백 충분히 확보 / Adequate spacing above */
 }
 
-nav a {
-  color: #f0f0f0; /* 메뉴 링크 색상 / Link color */
-  text-decoration: none; /* 밑줄 제거 / No underline */
-  font-weight: bold; /* 굵은 글씨 / Bold font */
+#header h1 {
+  margin: 0;
+  font-size: 2.5rem; /* 사이트 제목 크기 강조 / Large site title */
+  color: white;
 }
 
-nav a:hover {
-  color: #7cae7a; /* 마우스 오버 시 강조 색 / Highlight on hover */
+#header p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: white; /* 부제목도 하얀색으로 통일 / Subheading in white */
 }
 
-/* ============================= */
-/* 🏁 배너 영역 / Hero Banner */
-/* ============================= */
-.banner {
-  background: #3d3d3d; /* 배너 배경 / Banner background */
-  padding: 4rem 2rem; /* 큰 여백으로 강조 / Emphasized padding */
-  text-align: center; /* 텍스트 가운데 정렬 / Center text */
+/* 🔹 내비게이션 / Navigation */
+#nav {
+  background: #1a1a1a; /* 어두운 배경으로 헤더와 구분 / Dark separator nav */
+  padding: 1rem;
+  text-align: center;
 }
 
-.banner h2 {
-  font-size: 2rem; /* 배너 제목 크기 / Banner heading */
+#nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex; /* 수평 정렬 / Horizontal menu */
+  justify-content: center;
+  flex-wrap: wrap; /* 작은 화면에서 자동 줄바꿈 / Wrap on small screens */
+}
+
+#nav ul li {
+  margin: 0 1rem;
+}
+
+#nav ul li a {
+  color: white; /* 메뉴 항목 기본 색 / Default menu color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#nav ul li a:hover {
+  color: #7cae7a; /* 마우스 오버 시 강조 색상 / Highlight on hover */
+}
+
+/* 🔹 배너 / Banner */
+#banner {
+  background: #3d3d3d; /* 다크 배경 강조 배너 / Emphasized banner section */
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+#banner h2 {
+  font-size: 2rem;
+  color: white;
   margin-bottom: 1rem;
 }
 
-.banner p {
+#banner p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
 .button {
   display: inline-block;
-  background-color: #c1995b; /* 버튼 배경색 (황토톤) / Warm earthy button color */
-  color: #fff;
+  background-color: #c1995b; /* 황토색 기반 버튼 배경 / Warm, earthy tone */
+  color: white;
   padding: 0.8rem 1.5rem;
-  border-radius: 6px; /* 부드러운 둥근 모서리 / Rounded corners */
+  border-radius: 8px; /* 부드러운 모서리 / Rounded corners */
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s; /* hover 애니메이션 부드럽게 / Smooth hover */
+  transition: background 0.3s; /* 부드러운 호버 효과 / Smooth hover */
 }
 
 .button:hover {
-  background-color: #a17640; /* hover 시 더 진한 황토색 / Darker hover tone */
+  background-color: #a17640; /* hover 시 더 어두운 황토색 / Darker on hover */
 }
 
-/* =================================== */
-/* 📦 수업 카드 타일 레이아웃 / Tiles */
-/* =================================== */
-.tiles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 반응형 컬럼 / Responsive grid */
+/* 🔹 메인 섹션 / Main Grid */
+#main.container {
+  padding: 4rem 2rem; /* 섹션 상하 여백 확보 / Padding for breathing room */
+}
+
+#main .row {
+  display: flex;
+  flex-wrap: wrap; /* 반응형 카드 배열 / Responsive flex cards */
   gap: 2rem;
-  padding: 3rem 1.5rem;
-  max-width: 1100px;
-  margin: auto;
+  justify-content: center;
 }
 
-.tile {
-  background: #3b3b3b;
-  padding: 1.5rem;
+#main .box {
+  background: #3b3b3b; /* 카드 배경색 / Card background */
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 2rem;
   text-align: center;
-  transition: transform 0.3s; /* hover 시 부드러운 이동 / Smooth hover float */
+  box-shadow: 0 0 15px rgba(0,0,0,0.2); /* 그림자 효과 / Shadow effect */
+  flex: 1 1 250px;
+  transition: transform 0.3s;
 }
 
-.tile:hover {
-  transform: translateY(-5px); /* 마우스 오버 시 위로 떠오름 / Lift on hover */
+#main .box:hover {
+  transform: translateY(-5px); /* 마우스 오버 시 부드러운 상승 / Float on hover */
 }
 
-.tile h3 {
-  color: #ffffff;
-  margin-bottom: 1rem;
+#main .box h3 {
+  color: white;
+  margin-bottom: 0.5rem;
 }
 
-.tile p {
-  color: #cccccc; /* 설명 텍스트 회색 / Light gray for content */
+#main .box p {
+  color: #ccc;
 }
 
-/* ============================= */
-/* 📚 소개 섹션 / About Section */
-/* ============================= */
-#about {
-  padding: 3rem 1.5rem;
+/* 🔹 소개 / About */
+#about.container {
   background-color: #2e2e2e;
   text-align: center;
+  padding: 4rem 2rem;
 }
 
 #about h2 {
@@ -141,17 +140,16 @@ nav a:hover {
 }
 
 #about p {
-  max-width: 800px; /* 본문 폭 제한 / Limit paragraph width */
+  max-width: 700px;
   margin: 0 auto;
+  color: #ccc;
 }
 
-/* ============================= */
-/* 📞 연락처 섹션 / Contact Section */
-/* ============================= */
-#contact {
-  padding: 3rem 1.5rem;
+/* 🔹 연락처 / Contact */
+#contact.container {
   background-color: #202020;
   text-align: center;
+  padding: 4rem 2rem;
 }
 
 #contact h2 {
@@ -159,36 +157,32 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
-#contact p {
-  margin: 0.5rem 0; /* 줄 간격 / Line spacing */
+#contact p,
+#contact li {
+  margin: 0.5rem 0;
+  color: #ccc;
 }
 
-/* ============================= */
-/* 🧾 푸터 / Footer */
-/* ============================= */
-footer {
+/* 🔹 푸터 / Footer */
+#footer {
   background: #111;
   color: #aaa;
   text-align: center;
   padding: 2rem 1rem;
-  margin-top: 4rem;
 }
 
-/* ============================= */
-/* 📱 반응형 / Responsive Design */
-/* ============================= */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 2rem; /* 작은 화면용 제목 크기 축소 / Smaller heading */
+/* 🔹 반응형 / Responsive */
+@media (max-width: 768px) {
+  #main .row {
+    flex-direction: column; /* 모바일에서 세로 정렬 / Stack on mobile */
   }
-  nav ul {
-    flex-direction: column; /* 수직 정렬 / Vertical menu on small screens */
-    align-items: center;
+
+  #main .box {
+    margin: 0 auto;
   }
-  .banner h2 {
-    font-size: 1.5rem; /* 배너 제목 축소 / Smaller banner title */
-  }
-  .banner p {
-    font-size: 1rem; /* 설명 축소 / Smaller subtitle */
+
+  #nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
