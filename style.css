@@ -5,42 +5,214 @@ body {
   font-family: 'Noto Sans KR', sans-serif; /* 한국어 웹페이지에 최적화된 산세리프 글꼴 / Korean-optimized sans-serif font */
   background: #2c2c2c; /* 전체 배경을 어두운 회색으로 설정 / Set dark background */
   color: #f0f0f0; /* 텍스트 색상을 밝은 회색으로 설정 / Light gray text for contrast */
-  margin: 0; /* 브라우저 기본 여백 제거 / Remove default margin */
-  padding: 0; /* 브라우저 기본 패딩 제거 / Remove default padding */
-  line-height: 1.6; /* 줄 간격 증가로 가독성 향상 / Improve readability with larger line spacing */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6; /* 줄 간격 증가로 가독성 향상 / Better readability */
 }
 
 /* ✅ 정사각형 유지용 클래스 / Square Card Helper */
 .square {
-  aspect-ratio: 1 / 1; /* 정사각형 비율 유지 / Maintain square shape regardless of content */
-  display: flex; /* Flexbox 레이아웃 사용 / Use flexbox for alignment */
-  flex-direction: column; /* 세로 방향 정렬 / Stack child elements vertically */
-  justify-content: center; /* 수직 중앙 정렬 / Vertically center contents */
-  align-items: center; /* 수평 중앙 정렬 / Horizontally center contents */
-  padding: 1.5rem; /* 내부 여백 설정 / Add spacing inside the box */
-  box-sizing: border-box; /* 테두리 및 패딩 포함한 크기 계산 / Ensure total size includes padding */
-  text-align: center; /* 텍스트 가운데 정렬 / Center align text */
-  background: #3b3b3b; /* 어두운 카드 배경 / Dark background for card */
-  border-radius: 10px; /* 부드러운 모서리 / Rounded corners for modern feel */
-  box-shadow: 0 0 15px rgba(0,0,0,0.2); /* 그림자 효과로 입체감 부여 / Add depth with shadow */
-  transition: transform 0.3s ease; /* hover 시 부드러운 효과 / Smooth transition on hover */
+  aspect-ratio: 1 / 1; /* 정사각형 비율 유지 / Maintain square shape */
+  display: flex; /* 내용 정렬을 위한 플렉스 설정 / Flex for content alignment */
+  flex-direction: column; /* 세로 정렬 / Vertical layout */
+  justify-content: center; /* 중앙 정렬 (수직) / Center vertically */
+  align-items: center; /* 중앙 정렬 (수평) / Center horizontally */
+  padding: 1.5rem; /* 내부 여백 / Internal spacing */
+  box-sizing: border-box; /* 패딩 포함한 크기 계산 / Include padding in size */
+  text-align: center; /* 텍스트 가운데 정렬 / Centered text */
+  background: #3b3b3b; /* 배경색 지정 / Background color */
+  border-radius: 10px; /* 부드러운 모서리 / Rounded corners */
+  box-shadow: 0 0 15px rgba(0,0,0,0.2); /* 그림자 효과 / Shadow effect */
+  transition: transform 0.3s; /* hover 부드럽게 / Smooth hover */
 }
 
 .square:hover {
-  transform: translateY(-5px); /* 마우스 오버 시 위로 살짝 떠오름 / Slight lift on hover */
+  transform: translateY(-5px); /* 마우스 오버 시 살짝 상승 / Lift on hover */
 }
 
 .square h3 {
-  color: white; /* 제목 텍스트 색상 / Title color for readability */
-  margin-bottom: 0.5rem; /* 제목과 설명 사이 간격 / Space between title and text */
-  font-size: 1.3rem; /* 제목 크기 설정 / Set heading size */
-  font-weight: 600; /* 강조 / Emphasize heading */
+  color: white; /* 제목 텍스트 색상 / Title color */
+  margin-bottom: 0.5rem;
 }
 
 .square p {
-  color: #ccc; /* 설명 텍스트 색상 / Descriptive text color */
-  font-size: 0.95rem; /* 텍스트 크기 / Readable font size */
-  line-height: 1.5; /* 줄 간격으로 가독성 향상 / Improve legibility */
-  max-width: 90%; /* 텍스트 너비 제한 / Prevent text overflow */
-  margin: 0 auto; /* 수평 가운데 정렬 / Center within box */
+  color: #ccc; /* 설명 텍스트 회색 / Light gray text */
+  font-size: 0.95rem;
+}
+
+/* 🔹 헤더 / Header */
+#header {
+  background: #7cae7a; /* 은은한 연두빛 한국적인 녹색 배경 / Soft Korean-inspired green background */
+  text-align: center;
+  padding: 4rem 1rem; /* 상단 여백 충분히 확보 / Adequate spacing above */
+}
+
+#header h1 {
+  margin: 0;
+  font-size: 2.5rem; /* 사이트 제목 크기 강조 / Large site title */
+  color: white;
+}
+
+#header p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: white; /* 부제목도 하얀색으로 통일 / Subheading in white */
+}
+
+/* 🔹 내비게이션 / Navigation */
+#nav {
+  background: #1a1a1a; /* 어두운 배경으로 헤더와 구분 / Dark separator nav */
+  padding: 1rem;
+  text-align: center;
+}
+
+#nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex; /* 수평 정렬 / Horizontal menu */
+  justify-content: center;
+  flex-wrap: wrap; /* 작은 화면에서 자동 줄바꿈 / Wrap on small screens */
+}
+
+#nav ul li {
+  margin: 0 1rem;
+}
+
+#nav ul li a {
+  color: white; /* 메뉴 항목 기본 색 / Default menu color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#nav ul li a:hover {
+  color: #7cae7a; /* 마우스 오버 시 강조 색상 / Highlight on hover */
+}
+
+/* 🔹 배너 / Banner */
+#banner {
+  background: #3d3d3d; /* 다크 배경 강조 배너 / Emphasized banner section */
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+#banner h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+#banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  display: inline-block;
+  background-color: #c1995b; /* 황토색 기반 버튼 배경 / Warm, earthy tone */
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px; /* 부드러운 모서리 / Rounded corners */
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s; /* 부드러운 호버 효과 / Smooth hover */
+}
+
+.button:hover {
+  background-color: #a17640; /* hover 시 더 어두운 황토색 / Darker on hover */
+}
+
+/* 🔹 메인 섹션 / Main Grid */
+#main.container {
+  padding: 4rem 2rem; /* 섹션 상하 여백 확보 / Padding for breathing room */
+}
+
+#main .row {
+  display: flex;
+  flex-wrap: wrap; /* 반응형 카드 배열 / Responsive flex cards */
+  gap: 2rem;
+  justify-content: center;
+}
+
+#main .box {
+  background: #3b3b3b; /* 카드 배경색 / Card background */
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2); /* 그림자 효과 / Shadow effect */
+  flex: 1 1 250px;
+  transition: transform 0.3s;
+}
+
+#main .box:hover {
+  transform: translateY(-5px); /* 마우스 오버 시 부드러운 상승 / Float on hover */
+}
+
+#main .box h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+#main .box p {
+  color: #ccc;
+}
+
+/* 🔹 소개 / About */
+#about.container {
+  background-color: #2e2e2e;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ccc;
+}
+
+/* 🔹 연락처 / Contact */
+#contact.container {
+  background-color: #202020;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#contact p,
+#contact li {
+  margin: 0.5rem 0;
+  color: #ccc;
+}
+
+/* 🔹 푸터 / Footer */
+#footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* 🔹 반응형 / Responsive */
+@media (max-width: 768px) {
+  #main .row {
+    flex-direction: column; /* 모바일에서 세로 정렬 / Stack on mobile */
+  }
+
+  #main .box {
+    margin: 0 auto;
+  }
+
+  #nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
