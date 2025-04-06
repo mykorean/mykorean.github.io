@@ -1,149 +1,194 @@
-/* style.css */
+/* style.css - 확장 버전: Dopetrope 스타일 + 배너 + 소개 + 연락처 */
 
-/*
-  Apply global font and layout settings
-  전역 폰트 및 레이아웃 설정 적용
-*/
+/* ============================= */
+/* 🌐 전역 설정 / Global Settings */
+/* ============================= */
 body {
-  font-family: 'Noto Sans KR', sans-serif; /* Use a Korean-friendly font / 한국어 친화적인 폰트 사용 */
-  margin: 0; /* Remove default margin / 기본 여백 제거 */
-  padding: 0; /* Remove default padding / 기본 패딩 제거 */
-  line-height: 1.6; /* Improve line spacing for readability / 가독성을 위한 줄 간격 조정 */
-  background: linear-gradient(180deg, #f9f5f0 0%, #ffffff 100%); /* Soft traditional Korean background / 부드러운 한국적 배경 그라디언트 */
-  color: #333; /* Set base text color / 기본 텍스트 색상 설정 */
+  font-family: 'Noto Sans KR', sans-serif; /* 한국어에 최적화된 고급 고딕체 / Elegant Korean sans-serif font */
+  margin: 0; /* 페이지 여백 제거 / Remove page margin */
+  padding: 0; /* 페이지 패딩 제거 / Remove page padding */
+  background: #2c2c2c; /* 기본 다크 배경 / Dark theme background */
+  color: #f0f0f0; /* 기본 텍스트 색상 / Default text color */
+  line-height: 1.6; /* 줄 간격 / Line height */
 }
 
-/* Header 스타일 - 모던한 한국 전통색 조합 */
+/* ============================= */
+/* 🎨 헤더 스타일 / Header Styling */
+/* ============================= */
 header {
-  background: linear-gradient(to right, 
-    #c72e4f,  /* 홍색 (홍련): 전통적인 붉은색 (혼례, 복주머니 등에서 사용) */
-    #2a5caa,  /* 청색 (청자): 맑고 단정한 느낌, 수묵화나 도자기에서 자주 보임 */
-    #ffffff,  /* 백색 (백련): 깨끗함, 순수함 (배경에 어울림) */
-    #222222,  /* 흑색 (먹색): 단정함, 무게감 (푸터나 제목에 어울림) */
-    #c1995b,  /* 황토색: 한옥, 도자기 색상에 자주 쓰임 */
-    #7cae7a   /* 연두빛(유채색): 자연, 싱그러움, 봄 느낌 */
-  );
-  color: white; /* White text for contrast / 대비를 위한 흰색 텍스트 */
-  padding: 1rem 2rem; /* Vertical and horizontal padding / 상하좌우 여백 */
-  text-align: center; /* Center-align header text / 헤더 텍스트 가운데 정렬 */
+  background: linear-gradient(to right, #c72e4f, #2a5caa, #ffffff, #222222, #c1995b, #7cae7a); /* 전통 한국 색상 기반 그라데이션 / Traditional Korean gradient */
+  color: white; /* 텍스트 색상 / Text color */
+  padding: 2rem 1.5rem; /* 상하 2rem 좌우 1.5rem 여백 / Padding */
+  text-align: center; /* 텍스트 가운데 정렬 / Center align */
 }
 
 header h1 {
-  margin: 0; /* Remove default margin / 기본 마진 제거 */
-  font-size: 2.5rem; /* Large heading size / 큰 제목 크기 */
-  letter-spacing: 1px; /* Slight spacing for elegance / 세련된 글자 간격 */
+  margin: 0; /* 기본 마진 제거 / Remove default margin */
+  font-size: 2.5rem; /* 큰 제목 크기 / Large heading */
 }
 
-/* Navigation menu */
+/* ============================= */
+/* 🧭 내비게이션 / Navigation Bar */
+/* ============================= */
+nav {
+  background: #1a1a1a; /* 다크 그레이 배경 / Dark gray nav background */
+  padding: 1rem; /* 내비게이션 바 여백 / Padding */
+}
+
 nav ul {
-  list-style: none; /* Remove list bullets / 리스트 점 제거 */
-  padding: 0; /* Remove padding / 여백 제거 */
-  display: flex; /* Flex layout / 플렉스 레이아웃 사용 */
-  justify-content: center; /* Center navigation items / 내비게이션 항목 가운데 정렬 */
-  margin-top: 0.5rem; /* Space above navigation / 내비게이션 위 간격 */
-  flex-wrap: wrap; /* Wrap on small screens / 작은 화면에서 줄바꿈 */
+  list-style: none; /* 점 없는 리스트 / No bullets */
+  display: flex; /* 가로 정렬 / Horizontal flex */
+  justify-content: center; /* 가운데 정렬 / Centered items */
+  flex-wrap: wrap; /* 반응형 감김 처리 / Wrap on small screens */
+  padding: 0;
+  margin: 0;
 }
 
-nav ul li {
-  margin: 0 1rem; /* Horizontal spacing between items / 항목 간 좌우 여백 */
+nav li {
+  margin: 0 1rem; /* 리스트 항목 사이 간격 / Spacing between menu items */
 }
 
-nav ul li a {
-  color: white; /* Link color / 링크 색상 */
-  text-decoration: none; /* Remove underline / 밑줄 제거 */
-  font-weight: bold; /* Emphasize links / 링크 강조 */
+nav a {
+  color: #f0f0f0; /* 메뉴 링크 색상 / Link color */
+  text-decoration: none; /* 밑줄 제거 / No underline */
+  font-weight: bold; /* 굵은 글씨 / Bold font */
 }
 
-nav ul li a:hover {
-  text-decoration: underline; /* Underline on hover / 마우스 오버 시 밑줄 표시 */
+nav a:hover {
+  color: #7cae7a; /* 마우스 오버 시 강조 색 / Highlight on hover */
 }
 
-/* Language switcher */
-.language-switcher {
-  display: flex; /* Horizontal layout / 가로 배치 */
-  justify-content: flex-end; /* Align to right / 오른쪽 정렬 */
-  padding: 0.5rem 1rem; /* Padding around language switcher / 여백 */
-  background-color: #f2f2f2; /* Light background / 연한 회색 배경 */
+/* ============================= */
+/* 🏁 배너 영역 / Hero Banner */
+/* ============================= */
+.banner {
+  background: #3d3d3d; /* 배너 배경 / Banner background */
+  padding: 4rem 2rem; /* 큰 여백으로 강조 / Emphasized padding */
+  text-align: center; /* 텍스트 가운데 정렬 / Center text */
 }
 
-.lang-btn {
-  margin-left: 1rem; /* Spacing between buttons / 버튼 간격 */
-  text-decoration: none; /* Remove underline / 밑줄 제거 */
-  color: #444; /* Neutral button color / 중립적인 버튼 색상 */
-  font-weight: bold; /* Emphasize active state / 강조 */
+.banner h2 {
+  font-size: 2rem; /* 배너 제목 크기 / Banner heading */
+  margin-bottom: 1rem;
 }
 
-.lang-btn.active {
-  color: #c72e4f; /* Match with header color / 헤더 색상과 일치 */
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-/* Main content */
-main {
-  padding: 2rem 1.5rem; /* Inner content padding / 안쪽 여백 */
-  max-width: 900px; /* Limit content width / 콘텐츠 최대 너비 제한 */
-  margin: auto; /* Center align / 가운데 정렬 */
-}
-
-section {
-  margin-bottom: 3rem; /* Space between sections / 섹션 간 간격 */
-  background-color: white; /* White background / 흰색 배경 */
-  padding: 1.5rem; /* Inner spacing / 내부 여백 */
-  border-radius: 10px; /* Rounded corners / 둥근 테두리 */
-  box-shadow: 0 0 15px rgba(0,0,0,0.05); /* Soft shadow / 부드러운 그림자 */
-}
-
-h2 {
-  color: #c72e4f; /* Section heading color / 섹션 제목 색상 */
-}
-
-/* Button 스타일 - 전통 황토 느낌의 모던화 */
 .button {
-  display: inline-block; /* Inline block to behave like a button / 버튼처럼 작동하도록 설정 */
-  margin-top: 1rem; /* Margin above button / 버튼 위 간격 */
-  padding: 0.8rem 1.5rem; /* Inner padding / 안쪽 여백 */
-  background-color: #c1995b; /* Korean earthy yellow / 한국 전통 황토색 계열 */
-  color: #fff; /* White text / 흰색 텍스트 */
-  text-decoration: none; /* Remove underline / 밑줄 제거 */
-  border-radius: 8px; /* Rounded corners / 둥근 모서리 */
-  font-weight: bold; /* Bold font / 굵은 글꼴 */
-  transition: background 0.3s; /* Smooth transition on hover / 마우스 오버 시 부드러운 변화 */
+  display: inline-block;
+  background-color: #c1995b; /* 버튼 배경색 (황토톤) / Warm earthy button color */
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px; /* 부드러운 둥근 모서리 / Rounded corners */
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s; /* hover 애니메이션 부드럽게 / Smooth hover */
 }
 
 .button:hover {
-  background-color: #a17640; /* Slightly deeper earthy tone / 더 진한 황토색 */
+  background-color: #a17640; /* hover 시 더 진한 황토색 / Darker hover tone */
 }
 
-/* 이미지 스타일 */
-.main-image,
-.section-image {
-  display: block; /* Center block display / 블록 형태로 가운데 배치 */
-  max-width: 100%; /* Responsive image width / 반응형 이미지 크기 */
-  height: auto; /* Maintain aspect ratio / 비율 유지 */
-  margin: 1rem auto; /* Center with margin / 마진으로 가운데 정렬 */
+/* =================================== */
+/* 📦 수업 카드 타일 레이아웃 / Tiles */
+/* =================================== */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 반응형 컬럼 / Responsive grid */
+  gap: 2rem;
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
+  margin: auto;
 }
 
-/* Footer 스타일 */
+.tile {
+  background: #3b3b3b;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.3s; /* hover 시 부드러운 이동 / Smooth hover float */
+}
+
+.tile:hover {
+  transform: translateY(-5px); /* 마우스 오버 시 위로 떠오름 / Lift on hover */
+}
+
+.tile h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.tile p {
+  color: #cccccc; /* 설명 텍스트 회색 / Light gray for content */
+}
+
+/* ============================= */
+/* 📚 소개 섹션 / About Section */
+/* ============================= */
+#about {
+  padding: 3rem 1.5rem;
+  background-color: #2e2e2e;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  max-width: 800px; /* 본문 폭 제한 / Limit paragraph width */
+  margin: 0 auto;
+}
+
+/* ============================= */
+/* 📞 연락처 섹션 / Contact Section */
+/* ============================= */
+#contact {
+  padding: 3rem 1.5rem;
+  background-color: #202020;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#contact p {
+  margin: 0.5rem 0; /* 줄 간격 / Line spacing */
+}
+
+/* ============================= */
+/* 🧾 푸터 / Footer */
+/* ============================= */
 footer {
-  background-color: #222; /* Dark footer background / 어두운 푸터 배경 */
-  color: white; /* White text / 흰색 텍스트 */
-  text-align: center; /* Centered text / 텍스트 가운데 정렬 */
-  padding: 1rem; /* Padding around content / 콘텐츠 주변 여백 */
-  margin-top: 3rem; /* Margin above footer / 푸터 위 간격 */
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
 }
 
-/* 반응형 대응 - 모바일 최적화 */
+/* ============================= */
+/* 📱 반응형 / Responsive Design */
+/* ============================= */
 @media (max-width: 600px) {
-  nav ul {
-    flex-direction: column; /* Stack navigation vertically / 내비게이션 세로 정렬 */
-    align-items: center; /* Center items / 항목 가운데 정렬 */
-  }
-
   header h1 {
-    font-size: 2rem; /* Smaller font size for mobile / 모바일에 적합한 크기 */
+    font-size: 2rem; /* 작은 화면용 제목 크기 축소 / Smaller heading */
   }
-
-  .button {
-    width: 100%; /* Full-width button / 전체 너비 버튼 */
-    text-align: center; /* Center button text / 버튼 텍스트 가운데 정렬 */
+  nav ul {
+    flex-direction: column; /* 수직 정렬 / Vertical menu on small screens */
+    align-items: center;
+  }
+  .banner h2 {
+    font-size: 1.5rem; /* 배너 제목 축소 / Smaller banner title */
+  }
+  .banner p {
+    font-size: 1rem; /* 설명 축소 / Smaller subtitle */
   }
 }
