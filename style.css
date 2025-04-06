@@ -15,7 +15,14 @@ body {
 
 /* Header 스타일 - 모던한 한국 전통색 조합 */
 header {
-  background-color: #c72e4f; /* Korean modern red / 현대적인 한국 전통 홍색 */
+  background: linear-gradient(to right, 
+    #c72e4f,  /* 홍색 (홍련): 전통적인 붉은색 (혼례, 복주머니 등에서 사용) */
+    #2a5caa,  /* 청색 (청자): 맑고 단정한 느낌, 수묵화나 도자기에서 자주 보임 */
+    #ffffff,  /* 백색 (백련): 깨끗함, 순수함 (배경에 어울림) */
+    #222222,  /* 흑색 (먹색): 단정함, 무게감 (푸터나 제목에 어울림) */
+    #c1995b,  /* 황토색: 한옥, 도자기 색상에 자주 쓰임 */
+    #7cae7a   /* 연두빛(유채색): 자연, 싱그러움, 봄 느낌 */
+  );
   color: white; /* White text for contrast / 대비를 위한 흰색 텍스트 */
   padding: 1rem 2rem; /* Vertical and horizontal padding / 상하좌우 여백 */
   text-align: center; /* Center-align header text / 헤더 텍스트 가운데 정렬 */
