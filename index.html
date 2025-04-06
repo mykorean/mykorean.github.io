@@ -1,13 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MyKorean - Korean Class</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hanventures - Korean Class</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init();
+    });
+  </script>
 </head>
 <body>
-  <h1>Welcome to MyKorean!</h1>
-  <p>This is a homepage for Korean language teaching.</p>
-  <p>📧 Contact: hanventurer@gmail.com</p>
-  <p><a href="https://forms.gle/XXXX">Apply for Class (Google Form)</a></p>
+  <div class="language-switcher">
+    <a href="#" class="lang-btn active">한국어</a>
+    <a href="#" class="lang-btn">English</a>
+  </div>
+
+  <header>
+    <h1 data-aos="fade-down">Hanventures</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" data-aos="fade-up">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Hangul.svg" alt="Hangul Banner" class="main-image">
+      <h2 data-lang="한국어">환영합니다! 한국어 수업에 오신 것을 환영합니다!</h2>
+      <h2 data-lang="English" style="display: none;">Welcome to Korean Class!</h2>
+      <p data-lang="한국어">쉽고 재미있는 수업으로 한국어를 배워보세요!</p>
+      <p data-lang="English" style="display: none;">Learn Korean with fun and easy lessons tailored for all levels.</p>
+      <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="button" data-lang="both">
+        <i class="fas fa-edit"></i> Apply Now
+      </a>
+    </section>
+
+    <section id="about" data-aos="fade-up">
+      <h2 data-lang="both"><i class="fas fa-chalkboard-teacher"></i> About the Teacher</h2>
+      <p data-lang="한국어">경험 많고 열정적인 한국어 선생님이 여러분의 한국어 실력을 자신감 있게 끌어올려 드립니다!</p>
+      <p data-lang="English" style="display: none;">An experienced and passionate teacher will help you speak Korean confidently!</p>
+      <img src="https://cdn.pixabay.com/photo/2016/03/23/13/46/korean-1275149_960_720.png" alt="Korean Teacher Icon" class="section-image">
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <h2 data-lang="both"><i class="fas fa-envelope"></i> Contact</h2>
+      <p data-lang="both">Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+      <p data-lang="both"><i class="fas fa-map-marker-alt"></i> Auckland, New Zealand</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hanventures. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
