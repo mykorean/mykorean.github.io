@@ -8,159 +8,135 @@ body {
   font-family: 'Noto Sans KR', sans-serif; /* Use a Korean-friendly font / 한국어 친화적인 폰트 사용 */
   margin: 0; /* Remove default margin / 기본 여백 제거 */
   padding: 0; /* Remove default padding / 기본 패딩 제거 */
-  line-height: 1.6; /* Improve readability / 가독성 향상 */
-  background: linear-gradient(180deg, #fdf6f0 0%, #fff 100%); /* Light beige gradient / 연한 베이지색 그라디언트 */
+  line-height: 1.6; /* Improve line spacing for readability / 가독성을 위한 줄 간격 조정 */
+  background: linear-gradient(180deg, #f9f5f0 0%, #ffffff 100%); /* Soft traditional Korean background / 부드러운 한국적 배경 그라디언트 */
   color: #333; /* Set base text color / 기본 텍스트 색상 설정 */
 }
 
-/*
-  Style the site header with background color and padding
-  사이트 상단(header)의 배경색 및 여백 스타일
-*/
+/* Header 스타일 - 모던한 한국 전통색 조합 */
 header {
-  background-color: #e94e77; /* Vivid pinkish red / 활기찬 분홍빛 빨강 */
-  color: white; /* White text / 흰색 텍스트 */
-  padding: 1rem 2rem; /* Top-bottom 1rem, sides 2rem padding / 상하 1rem, 좌우 2rem 여백 */
-  text-align: center; /* Center the text / 텍스트 가운데 정렬 */
+  background-color: #c72e4f; /* Korean modern red / 현대적인 한국 전통 홍색 */
+  color: white; /* White text for contrast / 대비를 위한 흰색 텍스트 */
+  padding: 1rem 2rem; /* Vertical and horizontal padding / 상하좌우 여백 */
+  text-align: center; /* Center-align header text / 헤더 텍스트 가운데 정렬 */
 }
 
 header h1 {
   margin: 0; /* Remove default margin / 기본 마진 제거 */
-  font-size: 2.5rem; /* Set heading size / 제목 크기 설정 */
-  letter-spacing: 1px; /* Slight letter spacing / 약간의 글자 간격 */
+  font-size: 2.5rem; /* Large heading size / 큰 제목 크기 */
+  letter-spacing: 1px; /* Slight spacing for elegance / 세련된 글자 간격 */
 }
 
-/*
-  Navigation menu styling
-  내비게이션 메뉴 스타일
-*/
+/* Navigation menu */
 nav ul {
-  list-style: none; /* Remove bullets / 리스트 점 제거 */
-  padding: 0; /* Remove padding / 패딩 제거 */
-  display: flex; /* Use flexbox for layout / Flexbox 레이아웃 사용 */
-  justify-content: center; /* Center items horizontally / 수평 가운데 정렬 */
-  margin-top: 0.5rem; /* Space above nav / 내비게이션 위 공간 */
-  flex-wrap: wrap; /* Wrap items on small screens / 작은 화면에서 감기도록 설정 */
+  list-style: none; /* Remove list bullets / 리스트 점 제거 */
+  padding: 0; /* Remove padding / 여백 제거 */
+  display: flex; /* Flex layout / 플렉스 레이아웃 사용 */
+  justify-content: center; /* Center navigation items / 내비게이션 항목 가운데 정렬 */
+  margin-top: 0.5rem; /* Space above navigation / 내비게이션 위 간격 */
+  flex-wrap: wrap; /* Wrap on small screens / 작은 화면에서 줄바꿈 */
 }
 
 nav ul li {
-  margin: 0 1rem; /* Side spacing between menu items / 메뉴 항목 간 좌우 여백 */
+  margin: 0 1rem; /* Horizontal spacing between items / 항목 간 좌우 여백 */
 }
 
 nav ul li a {
-  color: white; /* White text links / 흰색 링크 텍스트 */
+  color: white; /* Link color / 링크 색상 */
   text-decoration: none; /* Remove underline / 밑줄 제거 */
-  font-weight: bold; /* Make text bold / 굵은 텍스트 */
+  font-weight: bold; /* Emphasize links / 링크 강조 */
 }
 
 nav ul li a:hover {
-  text-decoration: underline; /* Underline on hover / 마우스 오버 시 밑줄 */
+  text-decoration: underline; /* Underline on hover / 마우스 오버 시 밑줄 표시 */
 }
 
-/*
-  Language switcher buttons
-  언어 전환 버튼 스타일
-*/
+/* Language switcher */
 .language-switcher {
-  display: flex;
-  justify-content: flex-end; /* Align buttons to the right / 버튼을 오른쪽 정렬 */
-  padding: 0.5rem 1rem;
-  background-color: #f2f2f2; /* Light gray background / 연한 회색 배경 */
+  display: flex; /* Horizontal layout / 가로 배치 */
+  justify-content: flex-end; /* Align to right / 오른쪽 정렬 */
+  padding: 0.5rem 1rem; /* Padding around language switcher / 여백 */
+  background-color: #f2f2f2; /* Light background / 연한 회색 배경 */
 }
 
 .lang-btn {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: #444;
-  font-weight: bold;
+  margin-left: 1rem; /* Spacing between buttons / 버튼 간격 */
+  text-decoration: none; /* Remove underline / 밑줄 제거 */
+  color: #444; /* Neutral button color / 중립적인 버튼 색상 */
+  font-weight: bold; /* Emphasize active state / 강조 */
 }
 
 .lang-btn.active {
-  color: #e94e77; /* Highlight active language / 활성화된 언어 강조 */
+  color: #c72e4f; /* Match with header color / 헤더 색상과 일치 */
 }
 
-/*
-  Main content area styling
-  메인 콘텐츠 영역 스타일
-*/
+/* Main content */
 main {
-  padding: 2rem 1.5rem; /* Top-bottom and side padding / 상하 2rem, 좌우 1.5rem 여백 */
+  padding: 2rem 1.5rem; /* Inner content padding / 안쪽 여백 */
   max-width: 900px; /* Limit content width / 콘텐츠 최대 너비 제한 */
-  margin: auto; /* Center content horizontally / 가운데 정렬 */
+  margin: auto; /* Center align / 가운데 정렬 */
 }
 
 section {
   margin-bottom: 3rem; /* Space between sections / 섹션 간 간격 */
   background-color: white; /* White background / 흰색 배경 */
-  padding: 1.5rem; /* Padding inside section / 섹션 안 여백 */
+  padding: 1.5rem; /* Inner spacing / 내부 여백 */
   border-radius: 10px; /* Rounded corners / 둥근 테두리 */
   box-shadow: 0 0 15px rgba(0,0,0,0.05); /* Soft shadow / 부드러운 그림자 */
 }
 
 h2 {
-  color: #e94e77; /* Heading color matches header / 제목 색상은 헤더와 통일 */
+  color: #c72e4f; /* Section heading color / 섹션 제목 색상 */
 }
 
-/*
-  Style for action button (e.g. Apply Now)
-  액션 버튼 스타일 (예: 신청하기)
-*/
+/* Button 스타일 - 전통 황토 느낌의 모던화 */
 .button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.8rem 1.5rem;
-  background-color: #ffb84d; /* Cheerful orange / 밝고 활기찬 주황색 */
+  display: inline-block; /* Inline block to behave like a button / 버튼처럼 작동하도록 설정 */
+  margin-top: 1rem; /* Margin above button / 버튼 위 간격 */
+  padding: 0.8rem 1.5rem; /* Inner padding / 안쪽 여백 */
+  background-color: #c1995b; /* Korean earthy yellow / 한국 전통 황토색 계열 */
   color: #fff; /* White text / 흰색 텍스트 */
-  text-decoration: none; /* No underline / 밑줄 없음 */
-  border-radius: 8px; /* Rounded corners / 둥근 버튼 모서리 */
-  font-weight: bold; /* Bold text / 굵은 텍스트 */
-  transition: background 0.3s; /* Smooth hover transition / 부드러운 호버 전환 */
+  text-decoration: none; /* Remove underline / 밑줄 제거 */
+  border-radius: 8px; /* Rounded corners / 둥근 모서리 */
+  font-weight: bold; /* Bold font / 굵은 글꼴 */
+  transition: background 0.3s; /* Smooth transition on hover / 마우스 오버 시 부드러운 변화 */
 }
 
 .button:hover {
-  background-color: #ffa600; /* Slightly darker orange / 조금 더 진한 주황 */
+  background-color: #a17640; /* Slightly deeper earthy tone / 더 진한 황토색 */
 }
 
-/*
-  Style for images and icons used in sections
-  섹션에 쓰이는 이미지와 아이콘 스타일
-*/
+/* 이미지 스타일 */
 .main-image,
 .section-image {
-  display: block;
-  max-width: 100%; /* Responsive image size / 반응형 이미지 크기 */
-  height: auto;
-  margin: 1rem auto; /* Center image / 이미지 가운데 정렬 */
+  display: block; /* Center block display / 블록 형태로 가운데 배치 */
+  max-width: 100%; /* Responsive image width / 반응형 이미지 크기 */
+  height: auto; /* Maintain aspect ratio / 비율 유지 */
+  margin: 1rem auto; /* Center with margin / 마진으로 가운데 정렬 */
 }
 
-/*
-  Footer styling
-  푸터 영역 스타일
-*/
+/* Footer 스타일 */
 footer {
-  background-color: #222; /* Dark background / 어두운 배경 */
+  background-color: #222; /* Dark footer background / 어두운 푸터 배경 */
   color: white; /* White text / 흰색 텍스트 */
-  text-align: center; /* Centered text / 가운데 정렬 */
-  padding: 1rem; /* Inner spacing / 내부 여백 */
-  margin-top: 3rem; /* Space above footer / 푸터 위 공간 */
+  text-align: center; /* Centered text / 텍스트 가운데 정렬 */
+  padding: 1rem; /* Padding around content / 콘텐츠 주변 여백 */
+  margin-top: 3rem; /* Margin above footer / 푸터 위 간격 */
 }
 
-/*
-  Responsive layout for mobile devices
-  모바일 기기용 반응형 레이아웃
-*/
+/* 반응형 대응 - 모바일 최적화 */
 @media (max-width: 600px) {
   nav ul {
-    flex-direction: column; /* Stack nav items vertically / 메뉴 항목 수직 배열 */
-    align-items: center; /* Centered items / 가운데 정렬 */
+    flex-direction: column; /* Stack navigation vertically / 내비게이션 세로 정렬 */
+    align-items: center; /* Center items / 항목 가운데 정렬 */
   }
 
   header h1 {
-    font-size: 2rem; /* Smaller heading on mobile / 모바일용 제목 크기 줄임 */
+    font-size: 2rem; /* Smaller font size for mobile / 모바일에 적합한 크기 */
   }
 
   .button {
-    width: 100%; /* Full-width button on mobile / 모바일에서 버튼 전체 너비 */
-    text-align: center; /* Centered text / 텍스트 가운데 정렬 */
+    width: 100%; /* Full-width button / 전체 너비 버튼 */
+    text-align: center; /* Center button text / 버튼 텍스트 가운데 정렬 */
   }
 }
