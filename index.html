@@ -1,112 +1,100 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Korean - 한국어 수업</title>
-
-  <!-- 외부 스타일시트 및 폰트 불러오기 / Import stylesheets and fonts -->
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="homepage is-preload">
+  <div id="page-wrapper">
 
-  <!-- 언어 전환 버튼 영역 / Language Toggle -->
-  <div class="language-switcher">
-    <a href="#" class="lang-btn active">한국어</a>
-    <a href="#" class="lang-btn">English</a>
-  </div>
-
-  <!-- 헤더 / Site Header -->
-  <header>
-    <h1 data-lang="both">My Korean</h1>
-    <p data-lang="한국어">현대적인 감성으로 배우는 한국어</p>
-    <p data-lang="English" style="display: none;">Learn Korean with a modern and intuitive approach</p>
-  </header>
-
-  <!-- 내비게이션 메뉴 / Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a href="#home">홈</a></li>
-      <li><a href="#classes">수업</a></li>
-      <li><a href="#about">소개</a></li>
-      <li><a href="#contact">연락처</a></li>
-    </ul>
-  </nav>
-
-  <!-- 배너 섹션 / Hero Banner -->
-  <section id="home" class="banner">
-    <h2 data-lang="한국어">한글과 함께하는 멋진 여행</h2>
-    <h2 data-lang="English" style="display: none;">A Wonderful Journey with Hangul</h2>
-    <p data-lang="한국어">새로운 언어, 문화, 기회를 만나는 여정을 지금 시작하세요</p>
-    <p data-lang="English" style="display: none;">Start your journey to explore new language, culture, and opportunity</p>
-    <a href="#classes" class="button" data-lang="both">수업 보기 / View Classes</a>
-  </section>
-
-  <!-- 메인 콘텐츠 / Main Content -->
-  <main>
-    <section id="classes" class="tiles">
-      <div class="tile">
-        <h3 data-lang="한국어">입문반</h3>
-        <h3 data-lang="English" style="display: none;">Beginner</h3>
-        <p data-lang="한국어">한글 자모부터 차근차근 배우는 입문자용 수업입니다.</p>
-        <p data-lang="English" style="display: none;">Learn Korean alphabet and basic grammar step by step.</p>
-      </div>
-      <div class="tile">
-        <h3 data-lang="한국어">회화반</h3>
-        <h3 data-lang="English" style="display: none;">Conversation</h3>
-        <p data-lang="한국어">일상 대화를 중심으로 자연스럽게 말하기 연습을 합니다.</p>
-        <p data-lang="English" style="display: none;">Practice real-life conversations in Korean.</p>
-      </div>
-      <div class="tile">
-        <h3 data-lang="한국어">TOPIK 준비반</h3>
-        <h3 data-lang="English" style="display: none;">TOPIK Prep</h3>
-        <p data-lang="한국어">한국어 능력시험을 목표로 시험 유형별 학습을 진행합니다.</p>
-        <p data-lang="English" style="display: none;">Prepare for the Korean Proficiency Test with structured lessons.</p>
-      </div>
-      <div class="tile">
-        <h3 data-lang="한국어">온라인 수업</h3>
-        <h3 data-lang="English" style="display: none;">Online Class</h3>
-        <p data-lang="한국어">줌을 활용한 실시간 비대면 수업도 지원합니다.</p>
-        <p data-lang="English" style="display: none;">Live online sessions available via Zoom.</p>
-      </div>
-      <div class="tile">
-        <h3 data-lang="한국어">수업 자료</h3>
-        <h3 data-lang="English" style="display: none;">Materials</h3>
-        <p data-lang="한국어">수업에서 사용하는 PPT, 워크북, 퀴즈 등 다양한 자료 제공</p>
-        <p data-lang="English" style="display: none;">Includes PPTs, workbooks, quizzes, and more.</p>
-      </div>
-      <div class="tile">
-        <h3 data-lang="한국어">수강 신청</h3>
-        <h3 data-lang="English" style="display: none;">Enrollment</h3>
-        <p data-lang="한국어">구글폼을 통해 간단히 수강 신청이 가능합니다.</p>
-        <p data-lang="English" style="display: none;">Apply easily via Google Forms.</p>
+    <!-- Header -->
+    <section id="header">
+      <div class="container">
+        <h1 id="logo"><a href="#">My Korean</a></h1>
+        <p>현대적인 감성으로 배우는 한국어 / Learn Korean with Modern Style</p>
       </div>
     </section>
-  </main>
 
-  <!-- 소개 섹션 / About Section -->
-  <section id="about">
-    <h2 data-lang="한국어">My Korean 소개</h2>
-    <h2 data-lang="English" style="display: none;">About My Korean</h2>
-    <p data-lang="한국어">My Korean은 한국어 교육에 대한 열정과 창의적인 방법으로 다양한 학습자에게 맞춘 프로그램을 제공합니다.</p>
-    <p data-lang="English" style="display: none;">My Korean offers creative and customized Korean education programs for diverse learners.</p>
-  </section>
+    <!-- Nav -->
+    <nav id="nav">
+      <ul>
+        <li class="current"><a href="#">Home</a></li>
+        <li><a href="#main">Courses</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-  <!-- 연락처 섹션 / Contact Section -->
-  <section id="contact">
-    <h2 data-lang="both">문의하기 / Contact</h2>
-    <p data-lang="both">이메일: <a href="mailto:hanventurer@gmail.com">hanventurer@gmail.com</a></p>
-    <p data-lang="both">카카오톡: My Korean</p>
-  </section>
+    <!-- Banner -->
+    <section id="banner">
+      <div class="content">
+        <h2>한글과 함께하는 멋진 여행<br />A Journey with Hangul</h2>
+        <p>새로운 언어, 문화, 기회를 만나는 여정을 지금 시작하세요<br />Start your journey into language and culture now.</p>
+        <a href="#main" class="button scrolly">수업 보기 / View Courses</a>
+      </div>
+    </section>
 
-  <!-- 푸터 / Footer -->
-  <footer>
-    <p>&copy; 2025 My Korean. All rights reserved.</p>
-  </footer>
+    <!-- Main -->
+    <section id="main" class="container">
+      <div class="row">
+        <div class="col-4 col-12-medium">
+          <section class="box">
+            <i class="fas fa-book fa-2x"></i>
+            <h3>입문반 / Beginner</h3>
+            <p>한글 자모부터 배우는 입문 수업 / Learn Korean alphabet from scratch.</p>
+          </section>
+        </div>
+        <div class="col-4 col-12-medium">
+          <section class="box">
+            <i class="fas fa-comments fa-2x"></i>
+            <h3>회화반 / Conversation</h3>
+            <p>자연스러운 한국어 말하기 연습 / Practice natural Korean speaking.</p>
+          </section>
+        </div>
+        <div class="col-4 col-12-medium">
+          <section class="box">
+            <i class="fas fa-file-alt fa-2x"></i>
+            <h3>TOPIK 준비 / TOPIK Prep</h3>
+            <p>시험 유형별 문제풀이와 전략 / Practice for Korean Proficiency Test.</p>
+          </section>
+        </div>
+      </div>
+    </section>
 
-  <!-- 언어 전환 기능을 위한 JavaScript 로딩 -->
+    <!-- About -->
+    <section id="about" class="container">
+      <header class="major">
+        <h2>About My Korean</h2>
+        <p>다양한 학습자를 위한 창의적인 한국어 수업 / Creative Korean lessons for all learners</p>
+      </header>
+      <p>My Korean은 모든 연령과 국적의 학습자에게 맞춤형 수업을 제공합니다.<br />From kids to adults, we tailor our Korean classes to suit every need and interest.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container">
+      <header class="major">
+        <h2>문의하기 / Contact</h2>
+        <p>연락을 기다리고 있어요! / We'd love to hear from you.</p>
+      </header>
+      <ul class="contact">
+        <li><i class="fas fa-envelope"></i> <a href="mailto:hanventurer@gmail.com">hanventurer@gmail.com</a></li>
+        <li><i class="fab fa-kickstarter"></i> 카카오톡: My Korean</li>
+        <li><i class="fas fa-map-marker-alt"></i> 뉴질랜드 오클랜드</li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="copyright">
+        <li>&copy; 2025 My Korean. All rights reserved.</li>
+      </ul>
+    </footer>
+  </div>
+
   <script src="main.js"></script>
 </body>
 </html>
